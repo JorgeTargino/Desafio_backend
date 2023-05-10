@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subscription:</strong>
+  <%= @event_history.subscription %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @event_history.type %>
+</p>
+
+<%= link_to 'Edit', edit_event_history_path(@event_history) %> |
+<%= link_to 'Back', event_histories_path %>

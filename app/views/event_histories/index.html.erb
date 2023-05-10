@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Event Histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subscription</th>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event_histories.each do |event_history| %>
+      <tr>
+        <td><%= event_history.subscription %></td>
+        <td><%= event_history.type %></td>
+        <td><%= link_to 'Show', event_history %></td>
+        <td><%= link_to 'Edit', edit_event_history_path(event_history) %></td>
+        <td><%= link_to 'Destroy', event_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event History', new_event_history_path %>
