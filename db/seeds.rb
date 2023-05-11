@@ -8,3 +8,10 @@
 Status.create(status_name: "SUBSCRIPTION_PURCHASED")
 Status.create(status_name: "SUBSCRIPTION_CANCELED")
 Status.create(status_name: "SUBSCRIPTION_RESTARTED")
+
+User.create(full_name: "Adolfo")
+User.create(full_name: "Ana Adila")
+User.create(full_name: "Alex")
+User.create(full_name: "Cesar")
+User.create(full_name: "Deybson")
+User.create(full_name: "Luana")
