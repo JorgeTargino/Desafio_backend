@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Status.create(status_name: "SUBSCRIPTION_PURCHASED")
+Status.create(status_name: "SUBSCRIPTION_CANCELED")
+Status.create(status_name: "SUBSCRIPTION_RESTARTED")
