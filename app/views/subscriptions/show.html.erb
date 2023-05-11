@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>References:</strong>
-  <%= @subscription.references %>
+  <strong>User:</strong>
+  <%= @subscription.user.full_name %>
 </p>
 
 <p>
-  <strong>References:</strong>
-  <%= @subscription.references %>
+  <strong>Status:</strong>
+  <%= @subscription.status.status_name %>
 </p>
 
 <%= link_to 'Edit', edit_subscription_path(@subscription) %> |
