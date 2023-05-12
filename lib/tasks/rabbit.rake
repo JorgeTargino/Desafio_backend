@@ -12,7 +12,7 @@ task rabbit: [:environment] do
     
 
     begin
-        puts ' [*] Waiting for messages. To exit press CTRL+C'
+        puts ' [*] Aguardando mensagens. Para sair aperte CTRL+C'
         queue.subscribe(block: true) do |_delivery_info, _properties, body|
             puts "Recebido: #{body}"
             hash = JSON.parse(body)
@@ -20,11 +20,11 @@ task rabbit: [:environment] do
             new_status = Status.where(id: hash["status"]).first
             if user.present? && new_status.present?
                 Subscription.first_or_create(user_id: user.id).update(status_id: new_status.id)
-              puts "User encontrado"
+              puts "Usuário encontrado"
             elsif user.blank?
-              puts "Erro: User não cadastrado"
+              puts "Erro: Usuário não cadastrado"
             elsif new_status.blank?
-                puts "Status não encontrado"
+                puts "Erro: Status não cadastrado"
             end
             puts ''
             puts ''
